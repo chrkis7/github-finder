@@ -1,3 +1,5 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Navbar from './components/layout/Navbar'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import Tykpography from '@mui/material/Typography'
@@ -13,9 +15,9 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <Typography variant='h6' component='h1'>
-        Hello World
-      </Typography>
+      <Router>
+        <Navbar />
+      </Router>
     </ThemeProvider>
   )
 }
