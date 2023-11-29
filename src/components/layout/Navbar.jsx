@@ -11,7 +11,7 @@ const navItems = ['Home', 'About'];
 
 function Navbar({ title }) {
   return (
-    <AppBar component='nav'>
+    <AppBar component='nav' position="static">
       <Toolbar>
         <GitHubIcon />
         <Typography
@@ -24,7 +24,10 @@ function Navbar({ title }) {
           {title}
           </Link>
         </Typography>
-        <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+        <Box 
+          sx={{ display: { xs: 'none', sm: 'block' } }}
+          marginRight={2}
+        >
           <Button>
             <Link href='/' color='#fff' underline='none'>
               {navItems[0]}
@@ -37,7 +40,7 @@ function Navbar({ title }) {
           </Button>
         </Box>
       </Toolbar>
-    </AppBar>
+    </AppBar> 
   )
 }
 
